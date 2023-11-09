@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab9</title>
+    </head>
+
+<body>
+
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+        }
+        h1{
+            color: gold;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+<script>
+    function set_arec()
+    {
+    var by_sel=document.getElementById("issel");
+    var my_a=document.getElementById("mypl");
+    var my_v=document.getElementById("myVideo1");
+    my_a.src ="audio/"+by_sel.value;
+    my_a.play();
+    my_v. pause();
+    }
+
+    function set_vrec(){
+        
+var by_sel=document.getElementById("video_id");
+var my_a=document.getElementById("mypl");
+var my_v=document.getElementById("video");
+ my_v.src ="video/"+by_sel.value;
+ my_v.play();
+ my_a. pause();
+    }
+
+</script>    
+<h1>Find your favorite song & video<h1>
+
+    <figure>
+        <img src="night.jpg" alt="Elephant at sunset" />
+        <figcaption style="color: beige; font-size:15px;">Atmosphere</figcaption>
+      </figure>
+
+
+    <form>
+        <select id = "video_id" onchange ="set_vrec()">
+        <option> Video </option>
+        <option value="Merry Christmas.mp4"> Merry Christmas </option>
+        <option value="Sunsat.mp4"> Sunsat </option>
+        <option value="Lioness.mp4"> Lioness </option>
+        <select>
+        </form>
+
+        <br>
+        <video id = "video" width="880" height="500" tabindex="0" controls poster = "video/Thumbnail.jpg" >
+         <source src="video/Merry Christmas.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+         <source src="video/Sunsat.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+         <source src="video/Lioness.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+
+        <br>
+        
+        <form >
+            <select id = "issel" onchange ="set_arec()">
+            <option> Music </option>
+            <option value="KALUSH - Stefania.mp3"> KALUSH - Stefania </option>
+            <option value="Fiinka - Довбуш.mp3"> Fiinka - Довбуш </option>
+            <option value="YARMAK - ДИКЕ ПОЛЕ (FT. ALISA).mp3"> YARMAK - ДИКЕ ПОЛЕ (FT. ALISA) </option>
+            </select>
+           </form>
+           <br>
+           
+           <audio id = "mypl" controls autoplay loop >
+       
+            
+           
+              
+</body>
+</html>
